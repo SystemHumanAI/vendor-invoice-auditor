@@ -6,24 +6,25 @@ An enterprise document audit pipeline built with **Langflow** and **Gemini 3.7 F
 
 ## System Architecture
 
-[Raw Multi-Page PDF]
-│
-▼
+```text
+[Raw Multi-Page PDF] 
+       │
+       ▼
 ┌──────────────────┐
 │  File Loader     │ ➔ Extracts unstructured text & raw tabular data
 └────────┬─────────┘
-│
-▼
+         │
+         ▼
 ┌──────────────────┐
 │ Gemini 3.7 Flash │ ➔ Ingests SYSTEM HUMAN 3-Part Diagnostic Framework
 └────────┬─────────┘
-│
-▼
+         │
+         ▼
 ┌──────────────────┐
 │ Structured Audit │ ➔ 1. Executive Summary
 │ Output Stream    │   2. Financial & Physical Anomalies
 └──────────────────┘   3. Recovery Action Plan
-
+```
 
 ---
 
